@@ -17,5 +17,3 @@ ReactDOM.render((
 ), document.getElementById('root'))
 
 registerServiceWorker();
-
-heroku create volunteer-ngos --buildpack https://github.com/mars/create-react-app-buildpack.git
