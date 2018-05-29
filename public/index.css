@@ -1,0 +1,38 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: white;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+h3 {
+  font-size: 1.77rem;
+  margin: 1.72rem 0 0.9rem 0;
+  font-weight: bold;
+}
+
+
+button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: white;
+    color: #4285f4;
+    cursor:pointer
+}
