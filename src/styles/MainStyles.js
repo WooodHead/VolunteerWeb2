@@ -18,7 +18,7 @@ export const HomeGrid = styled('div')`
   grid-template-rows: 18% 22% 22% 24% 14%;
 
   @media screen and (max-width: 600px) {
-    grid-template-rows: 15% 21% 20% 32% 12%;
+    grid-template-rows: 13% 21% 22% 32% 12%;
   }
 `
 
@@ -43,6 +43,8 @@ export const UpperHome = css`
   flex: 1;
 
   @media screen and (max-width: 600px) {
+    filter: grayscale(0.3);
+    background-position: 30% center;
     background-image:
     linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -72,6 +74,8 @@ export const UpperHome2 = css`
   flex: 1;
 
   @media screen and (max-width: 600px) {
+    filter: grayscale(0.3);
+    background-position: 30% center;
     background-image:
     linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -120,7 +124,7 @@ export const upperHomeTitle = css`
   margin: 0;
 
   @media screen and (max-width: 600px) {
-    font-size: 4rem;
+    font-size: 4.8rem;
   }
 `
 
@@ -142,6 +146,10 @@ export const CardTitle = css`
 export const lowerHomeText = css`
   font-size: 3rem;
   font-weight: bold;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2.4rem;
+  }
 `
 
 export const upperHomeText = css`
@@ -224,14 +232,18 @@ export const CardImage2 = styled('div')`
 
 export const MidRightPic = css`
   background-image: url("https://cdn.vox-cdn.com/thumbor/48bgIm25smFlEq5tayQAX4W5Q6k=/0x600/cdn.vox-cdn.com/uploads/chorus_asset/file/7218025/Pixel_F_Slate_uncropped_v2_simplified.psb.0.png");
-  background-size: contain;
-  margin-top: 5%;
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  display: flex;
+  flex:1;
   background-repeat: no-repeat;
-  margin-left: 0%;
+  background-position: center center;
+  width: 90%;
+  height: 90%;
 
-
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 35rem;
+  }
 `
 
 export const NavBarButton = styled('button')`

@@ -34,8 +34,8 @@ class Header extends Component {
     if (this.state.showDropdown) {
       return (
         <NavBarDropdown>
-          <NavLink to="/ngos"><p>For Helpers</p></NavLink>
-          <NavLink to="/ngos"><p>For Nonprofits</p></NavLink>
+          <NavLink to="/people" activeStyle={{fontWeight: 'bold',}}><p>For Helpers</p></NavLink>
+          <NavLink to="/ngos" activeStyle={{fontWeight: 'bold',}}><p>For Nonprofits</p></NavLink>
           <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"><p>Get the App</p></a>
         </NavBarDropdown>
       )
