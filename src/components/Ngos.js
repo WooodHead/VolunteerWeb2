@@ -40,7 +40,7 @@ const Home = () => (
     </MidHome>
 
     <MidHome backColor='#2196F3' color="white">
-      <div className={flexDiv} />
+      <div className={MidRightPic} />
       <div className={flexDiv}>
         <MidHomeTitle color="white">
           One Action for Every Need
@@ -54,7 +54,6 @@ const Home = () => (
           <li> Start a Goods Donation campaign and carry on with your mission</li>
           <h3>Recruiting </h3>
           <li> Fill your talent needs by receveing CVs from your supporters.</li>
-
         </MidLeftList>
       </div>
     </MidHome>
