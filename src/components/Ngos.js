@@ -2,7 +2,7 @@ import React from 'react';
 import { Query } from "react-apollo";
 import { HomeGrid, CardText, CardTitle,
   CardImage2, CardsContainer, Mid3Div,
-  Mid3Cards, UpperHome,MidRightPic, MidLeftList, flexDiv,
+  Mid3Cards, UpperHome2,MidRightPic, MidLeftList, flexDiv,
   MidHomeTitle, LowerHome, MidHome, lowerHomeText,
   upperHomeTitle, upperHomeText, NavBarButton
 } from '../styles/MainStyles';
@@ -10,15 +10,14 @@ import { HomeGrid, CardText, CardTitle,
 
 const Home = () => (
   <HomeGrid>
-    <div className={UpperHome}>
+    <div className={UpperHome2}>
         <h1 className={upperHomeTitle}>
           Volunteer
         </h1>
         <br />
         <p className={upperHomeText}>
-          {`A Platform to Empower Non Profits
-            in the Social Media times
-          `}
+            A <strong>launchpad</strong> to empower
+            <strong> Nonprofits </strong> in the digital era
           </p>
     </div>
 
@@ -47,7 +46,7 @@ const Home = () => (
         </MidHomeTitle>
         <MidLeftList white>
           <h3>Funding</h3>
-          <li> Finance your projects with crowdfunding calls across the community. </li>
+          <li> Fund your projects with crowdfunding calls across the community. </li>
           <h3>Volunteering</h3>
           <li> Raise Volunteers for specific activities or long term programs.</li>
           <h3>Materials</h3>
@@ -60,7 +59,7 @@ const Home = () => (
 
     <Mid3Div>
       <MidHomeTitle color="#2196F3">
-        Manage Everything, On the Browser
+        Web-Based Profile Management
       </MidHomeTitle>
       <div className={CardsContainer}>
         <Mid3Cards>

@@ -11,6 +11,7 @@ export const HeaderDiv = styled('div')`
   padding-right: 10%;
   box-shadow:
     inset 0px -0.125rem 0.125rem 0px rgba(0,0,0,0.5);
+    inset 0px 0.125rem 0.125rem 0px rgba(0,0,0,0.5);
 `
 
 export const Container1 = styled('div')`
@@ -38,6 +39,11 @@ export const NavbarLeft = styled('div')`
   font-size: 1.7rem;
   font-weight: bold;
   align-items: center;
+  text-decoration: none;
+
+  hover {
+    text-decoration: none;
+  }
 `
 export const NavbarRight = styled('div')`
   display: flex;

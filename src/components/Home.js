@@ -16,9 +16,8 @@ const Home = () => (
         </h1>
         <br />
         <p className={upperHomeText}>
-          {`An app to help drive change,
-            on what matters to you most
-          `}
+          An app to <strong>help</strong> drive change,
+          on what <strong>matters</strong> to you most
           </p>
     </div>
 
@@ -30,7 +29,7 @@ const Home = () => (
         <MidLeftList>
           <h3> 34 Causes</h3>
           <li> Discover and keep track of global problems. </li>
-          <h3>Non Profits</h3>
+          <h3>Nonprofits</h3>
           <li> Find and support the organizations fighting to tackle them. </li>
           <h3>Calls to Action</h3>
           <li> Leave your footrpint by helping them succeed in your own way. </li>
@@ -47,7 +46,7 @@ const Home = () => (
         </MidHomeTitle>
         <MidLeftList white>
           <h3>Find</h3>
-          <li >Non Profits worldwide by cause, location and mission. </li>
+          <li >Nonprofits worldwide by cause, location and mission. </li>
           <h3>Contribute </h3>
           <li> With goods, materials and anything they may need. </li>
           <h3>Volunteer</h3>
@@ -60,7 +59,7 @@ const Home = () => (
 
     <Mid3Div>
       <MidHomeTitle color="#4285f4">
-        Make Your Story
+        Go Leave Your Footprint
       </MidHomeTitle>
       <div className={CardsContainer}>
         <Mid3Cards>
@@ -75,7 +74,7 @@ const Home = () => (
           <h3 className={CardTitle}> Achievements</h3>
           <p className={CardText}>
             The more you help, the more you get back. Acquire unique
-            in-app rewards for helping Non-Profits !.
+            in-app rewards for helping NGOs !.
           </p>
         </Mid3Cards>
         <Mid3Cards>

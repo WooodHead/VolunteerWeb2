@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <MainDiv>
       <Switch>
-        <Route exact path='/' component={Home}/>
+        <Route exact path='/people' component={Home}/>
         <Route exact path='/ngos' component={Ngos}/>
         {/* <Route exact path='/platform' component={Home}/>
         <Route exact path='/about' component={Home}/> */}
