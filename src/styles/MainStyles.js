@@ -15,7 +15,7 @@ export const HomeGrid = styled('div')`
   grid-column: 1;
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-  grid-template-rows: 18% 23% 23% 22% 14%;
+  grid-template-rows: 18% 22% 22% 24% 14%;
 `
 
 // Sections
@@ -47,7 +47,7 @@ export const MidHome = styled('div')`
   color: ${props => props.color};
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
   display: grid;
-  align-items: space-evenly;
+  align-items: center;
   box-shadow:
     inset 0px 0.19rem 0.75px 0px rgba(0,0,0,0.2),
     inset 0px -0.19rem 0.75px 0px rgba(0,0,0,0.2);
@@ -75,6 +75,10 @@ export const upperHomeTitle = css`
   font-size: 6rem;
   text-shadow: 0.01rem 0.08rem 0.006rem #000;
   margin: 0;
+
+  @media screen and (max-width: 600px) {
+    font-size: 5rem;
+  }
 `
 
 export const MidHomeTitle = styled('h2')`
@@ -83,6 +87,8 @@ export const MidHomeTitle = styled('h2')`
   margin: 0;
   margin-bottom: 1.56rem;
   text-align: center;
+
+
 `
 
 export const CardTitle = css`
@@ -100,7 +106,7 @@ export const lowerHomeText = css`
 export const upperHomeText = css`
   font-size: 2rem;
   margin: 0;
-  padding: 7%;
+  padding: 0% 5% 5% 5%;
 `
 
 export const CardText = css`
@@ -176,18 +182,13 @@ export const CardImage2 = styled('div')`
 `
 
 export const MidRightPic = css`
-  background-image: url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b73302ddf5fabf9285df2da9c462efbb&auto=format&fit=crop&w=1350&q=80");
-  filter: grayscale(0.1) blur(0.0125rem);
+  background-image: url("https://cdn.vox-cdn.com/thumbor/48bgIm25smFlEq5tayQAX4W5Q6k=/0x600/cdn.vox-cdn.com/uploads/chorus_asset/file/7218025/Pixel_F_Slate_uncropped_v2_simplified.psb.0.png");
+  background-size: contain;
+  margin-top: 10%;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 18rem;
-  height: 18rem;
-  margin-left: 7%;
-  margin-right: 7%;
-  border-radius: 22px;
-  -webkit-box-shadow: 0.1875rem 0.1875rem 0.3125rem black;
-  -moz-box-shadow: 0.1875rem 0.1875rem 0.3125rem black;
-  box-shadow: 0.1875rem 0.1875rem 0.3125rem black;
+  margin-left: 0%;
 `
 
 export const NavBarButton = styled('button')`

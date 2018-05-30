@@ -22,9 +22,10 @@ class Header extends Component {
     }
     return (
       <Container1 justifyContent='flex-end' alignItems='center'>
+        <Link to="/"><p className={NavBarItem}>For Helpers</p></Link>
         <Link to="/ngos"><p className={NavBarItem}>For Nonprofits</p></Link>
-        <Link to="/platform"><p className={NavBarItem}>Platform</p></Link>
         <Link to="/about"><p className={NavBarItem}>About Us</p></Link>
+        <Link to="/platform"><p className={NavBarItem}>Platform</p></Link>
       <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"><NavBarButton>GET THE APP</NavBarButton></a>
       </Container1>
     )
@@ -34,8 +35,8 @@ class Header extends Component {
     if (this.state.showDropdown) {
       return (
         <NavBarDropdown>
+          <Link to="/ngos"><p>For Helpers</p></Link>
           <Link to="/ngos"><p>For Nonprofits</p></Link>
-          <Link to="/platform"><p>Platform</p></Link>
           <Link to="/about"><p>About Us</p></Link>
           <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"><p>Get the App</p></a>
         </NavBarDropdown>

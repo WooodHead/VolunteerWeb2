@@ -36,6 +36,7 @@ export const NavbarLeft = styled('div')`
   flex: 1;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 1.7rem;
+  font-weight: bold;
   align-items: center;
 `
 export const NavbarRight = styled('div')`

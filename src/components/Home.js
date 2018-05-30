@@ -16,8 +16,8 @@ const Home = () => (
         </h1>
         <br />
         <p className={upperHomeText}>
-          {`-An app to help drive change,
-            on what matters to you most-
+          {`An app to help drive change,
+            on what matters to you most
           `}
           </p>
     </div>
@@ -36,15 +36,11 @@ const Home = () => (
           <li> Leave your footrpint by helping them succeed in your own way. </li>
         </MidLeftList>
       </div>
-      <div className={flexDiv}>
-        <div className={MidRightPic} />
-      </div>
+      <div className={MidRightPic} />
     </MidHome>
 
     <MidHome backColor='#4285f4' color="white">
-      <div className={flexDiv}>
-        <div className={MidRightPic} />
-      </div>
+      <div className={MidRightPic} />
       <div className={flexDiv}>
         <MidHomeTitle color="white">
           What Can You Do ?

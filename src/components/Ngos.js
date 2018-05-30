@@ -17,7 +17,7 @@ const Home = () => (
         <br />
         <p className={upperHomeText}>
           {`A Platform to Empower Non Profits
-            in the Digital Era
+            in the Social Media times
           `}
           </p>
     </div>
@@ -36,15 +36,11 @@ const Home = () => (
           <li> Share your success, thank your volunteers and spread the reach of your projects on every opportunity.</li>
         </MidLeftList>
       </div>
-      <div className={flexDiv}>
-        <div className={MidRightPic} />
-      </div>
+      <div className={MidRightPic} />
     </MidHome>
 
     <MidHome backColor='#2196F3' color="white">
-      <div className={flexDiv}>
-        <div className={MidRightPic} />
-      </div>
+      <div className={flexDiv} />
       <div className={flexDiv}>
         <MidHomeTitle color="white">
           One Action for Every Need
@@ -55,7 +51,7 @@ const Home = () => (
           <h3>Volunteering</h3>
           <li> Raise Volunteers for specific activities or long term programs.</li>
           <h3>Materials</h3>
-          <li> Start a Goods Donation campaign and carry your mission</li>
+          <li> Start a Goods Donation campaign and carry on with your mission</li>
           <h3>Recruiting </h3>
           <li> Fill your talent needs by receveing CVs from your supporters.</li>
 
@@ -65,19 +61,19 @@ const Home = () => (
 
     <Mid3Div>
       <MidHomeTitle color="#2196F3">
-        A Platform for Non Profits
+        Manage Everything, On the Browser
       </MidHomeTitle>
       <div className={CardsContainer}>
         <Mid3Cards>
           <CardImage2 />
-        <h3 className={CardTitle}> Events Management</h3>
-        <p className={CardText}>
-          Create, Monitor and Control your Calls to Action 24/7 from the Web.
-        </p>
+          <h3 className={CardTitle}> Events Management</h3>
+          <p className={CardText}>
+            Create, Monitor and Control your Calls to Action 24/7 from the Web.
+          </p>
         </Mid3Cards>
         <Mid3Cards>
           <CardImage2 />
-        <h3 className={CardTitle}> Content Uploading  </h3>
+          <h3 className={CardTitle}> Content Uploading  </h3>
           <p className={CardText}>
            Boost awareness and engagement by uploading Images and Videos
            to the feed.
@@ -85,7 +81,7 @@ const Home = () => (
         </Mid3Cards>
         <Mid3Cards>
           <CardImage2 />
-        <h3 className={CardTitle}> Reach Statistics</h3>
+          <h3 className={CardTitle}> Reach Statistics</h3>
           <p className={CardText}>
             Get insights on the visibility of your NGO and demographics
             on your supporters.
