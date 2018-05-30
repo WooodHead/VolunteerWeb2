@@ -184,7 +184,7 @@ export const CardImage2 = styled('div')`
 export const MidRightPic = css`
   background-image: url("https://cdn.vox-cdn.com/thumbor/48bgIm25smFlEq5tayQAX4W5Q6k=/0x600/cdn.vox-cdn.com/uploads/chorus_asset/file/7218025/Pixel_F_Slate_uncropped_v2_simplified.psb.0.png");
   background-size: contain;
-  margin-top: 10%;
+  margin-top: 5%;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
