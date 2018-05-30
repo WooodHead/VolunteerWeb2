@@ -77,7 +77,7 @@ export const upperHomeTitle = css`
   margin: 0;
 
   @media screen and (max-width: 600px) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 `
 
@@ -87,8 +87,6 @@ export const MidHomeTitle = styled('h2')`
   margin: 0;
   margin-bottom: 1.56rem;
   text-align: center;
-
-
 `
 
 export const CardTitle = css`
