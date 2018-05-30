@@ -7,6 +7,6 @@ export const Grid = styled('div')`
   grid-template-rows: 1fr 55fr 4fr;
 
   @media screen and (max-width: 600px) {
-    grid-template-rows: 0.3fr 30fr 3fr;
+    grid-template-rows: 0.3fr 22fr 3fr;
   }
 `

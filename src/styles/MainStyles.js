@@ -16,6 +16,10 @@ export const HomeGrid = styled('div')`
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
   grid-template-rows: 18% 22% 22% 24% 14%;
+
+  @media screen and (max-width: 600px) {
+    grid-template-rows: 15% 19% 19% 32% 15%;;
+  }
 `
 
 // Sections
@@ -37,6 +41,15 @@ export const UpperHome = css`
   background-repeat: no-repeat;
   background-size: cover;
   flex: 1;
+
+  @media screen and (max-width: 600px) {
+    background-image:
+    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1505864681725-48344595127c?ixlib=rb-0.3.5&s=f470e3374660be909187565d2f10bfcd&auto=format&fit=crop&w=634&q=80");
+  }
 `
 
 export const MidHome = styled('div')`
@@ -187,6 +200,8 @@ export const MidRightPic = css`
   height: 100%;
   background-repeat: no-repeat;
   margin-left: 0%;
+
+
 `
 
 export const NavBarButton = styled('button')`
