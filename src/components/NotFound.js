@@ -1,8 +1,15 @@
 import React from 'react';
+import { flexDiv, MidHomeTitle } from '../styles/MainStyles.js'
 
-// Declare Search Component
 const NotFound = ({ location }) => {
-    <h1>Resource not found at '{location.pathname}'</h1>
+  return (
+    <flexDiv>
+      <MidHomeTitle color='#2F80ED'>
+        Whoops, we couldn't find '{location.pathname}'
+      </MidHomeTitle>
+    </flexDiv>
+  )
+
 }
 
 export default NotFound;

@@ -6,7 +6,7 @@ export const HeaderDiv = styled('div')`
   grid-row: 1;
   display: flex;
   align-items: center;
-  background-color: #4285f4;
+  background-color: #2F80ED;
   padding-left: 10%;
   padding-right: 10%;
   box-shadow:
@@ -28,7 +28,7 @@ export const NavBarDropdown = styled('div')`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
 `
 
 // Header Styles
@@ -36,7 +36,7 @@ export const NavbarLeft = styled('div')`
   display: flex;
   flex: 1;
   font-family: 'Gloria Hallelujah', cursive;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bold;
   align-items: center;
   text-decoration: none;
@@ -48,7 +48,7 @@ export const NavbarLeft = styled('div')`
 export const NavbarRight = styled('div')`
   display: flex;
   flex: 2;
-  font-size: 1.32rem;
+  font-size: 1.15rem;
   align-items: center;
   justify-content: flex-end;
   text-align: right;
@@ -59,13 +59,13 @@ export const NavBarItem = css`
 `
 
 export const NavBarButton = styled('button')`
-  font-size: 1.22rem;
-  background-color: #4285f4;
+  font-size: 1.16rem;
+  background-color: #2F80ED;
   background-origin: padding-box;
   font-weight: bold;
   color: white;
-  width: 10.6rem;
-  height: 2.9rem;
+  width: 10.3rem;
+  height: 2.7rem;
   box-sizing: border-box;
   border: 2px solid white;
   border-radius: 2px;

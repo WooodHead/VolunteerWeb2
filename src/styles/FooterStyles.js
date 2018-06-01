@@ -23,7 +23,7 @@ export const FooterSection = styled('div')`
 export const FooterTitle = css`
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 1.7rem;
-  margin: 1.5% 0% 3% 3%;
+  margin: 1.5% 0% 3% 0%;
   text-shadow: 0.125rem 0.125rem 0.125rem #000;
 `
 

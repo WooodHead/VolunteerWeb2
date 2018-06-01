@@ -106,7 +106,7 @@ export const LowerHome = css`
   padding-right: 10%;
   grid-column: span 12;
   display: flex;
-  background-color: #4285f4;
+  background-color: #2F80ED;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -137,7 +137,7 @@ export const MidHomeTitle = styled('h2')`
 `
 
 export const CardTitle = css`
-  color: #4285f4;
+  color: #2F80ED;
   font-size: 1.875rem;
   margin: 3rem 0 2rem 0;
 `
@@ -210,6 +210,7 @@ export const Mid3Cards = styled('div')`
   text-align: center;
 `
 
+// #f9f9f9
 // Image Divs
 export const CardImage = styled('div')`
   background-image: url("https://static1.squarespace.com/static/52bc56c5e4b09b49d45ff520/t/54846f83e4b0b09de1fe36e6/1417965457801/happn.jpg");
@@ -248,7 +249,7 @@ export const MidRightPic = css`
 
 export const NavBarButton = styled('button')`
   font-size: 1.32rem;
-  background-color: #4285f4;
+  background-color: #2F80ED;
   background-origin: padding-box;
   font-weight: bold;
   color: white;

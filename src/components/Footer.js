@@ -8,7 +8,7 @@ const Footer = () => {
     <FooterDiv>
         <FooterSection>
           <h1 className={FooterTitle}> Volunteer.org </h1>
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="70" width="190" alt='' />
+        <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="70" width="190" alt='' left='-2%' />
         </FooterSection>
 
         <FooterSection>

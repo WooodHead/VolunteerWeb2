@@ -58,7 +58,7 @@ const Home = () => (
     </MidHome>
 
     <Mid3Div>
-      <MidHomeTitle color="#2196F3">
+      <MidHomeTitle color="#2F80ED">
         Web-Based Profile Management
       </MidHomeTitle>
       <div className={CardsContainer}>

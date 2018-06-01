@@ -25,7 +25,7 @@ class Header extends Component {
         <NavLink to="/people" activeStyle={{fontWeight: 'bold',}}><p className={NavBarItem}>For Helpers</p></NavLink>
         <NavLink to="/ngos" activeStyle={{fontWeight: 'bold',}}><p className={NavBarItem}>For Nonprofits</p></NavLink>
         <NavLink to="/platform" activeStyle={{fontWeight: 'bold',}}><p className={NavBarItem}>Platform</p></NavLink>
-        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"><NavBarButton>GET THE APP</NavBarButton></a>
+        <a href="https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"><NavBarButton>GET THE APP</NavBarButton></a>
       </Container1>
     )
   }
@@ -36,7 +36,7 @@ class Header extends Component {
         <NavBarDropdown>
           <NavLink to="/people" activeStyle={{fontWeight: 'bold',}}><p>For Helpers</p></NavLink>
           <NavLink to="/ngos" activeStyle={{fontWeight: 'bold',}}><p>For Nonprofits</p></NavLink>
-          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"><p>Get the App</p></a>
+          <a  href="https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"><p>Get the App</p></a>
         </NavBarDropdown>
       )
     }

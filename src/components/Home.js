@@ -23,22 +23,22 @@ const Home = () => (
 
     <MidHome>
       <div className={flexDiv}>
-        <MidHomeTitle color="#2196F3">
+        <MidHomeTitle color="#2F80ED">
           What's on Volunteer ?
         </MidHomeTitle>
         <MidLeftList>
           <h3> 34 Causes</h3>
-          <li> Discover and keep track of global problems. </li>
+          <li> Discover and keep track of global issues. </li>
           <h3>Nonprofits</h3>
           <li> Find and support the organizations fighting to tackle them. </li>
           <h3>Calls to Action</h3>
-          <li> Leave your footrpint by helping them succeed in your own way. </li>
+          <li> Leave your footrpint by attending the NGOs needs in your own way. </li>
         </MidLeftList>
       </div>
       <div className={MidRightPic} />
     </MidHome>
 
-    <MidHome backColor='#4285f4' color="white">
+    <MidHome backColor='#2F80ED' color="white">
       <div className={MidRightPic} />
       <div className={flexDiv}>
         <MidHomeTitle color="white">
@@ -58,31 +58,31 @@ const Home = () => (
     </MidHome>
 
     <Mid3Div>
-      <MidHomeTitle color="#4285f4">
+      <MidHomeTitle color="#2F80ED">
         Go Leave Your Footprint
       </MidHomeTitle>
       <div className={CardsContainer}>
         <Mid3Cards>
           <CardImage />
-        <h3 className={CardTitle}> Giving Wall</h3>
+        <h3 className={CardTitle}> Helping Wall</h3>
         <p className={CardText}>
-          Keep track of all contributions you made, displayed in a memorable way.
+          Keep track of all contributions you made, displayed in your unique shareable helping wall.
         </p>
         </Mid3Cards>
         <Mid3Cards>
           <CardImage />
           <h3 className={CardTitle}> Achievements</h3>
           <p className={CardText}>
-            The more you help, the more you get back. Acquire unique
-            in-app rewards for helping NGOs !.
+            The more you help, the more you get back. Unlock achevements and
+            rewards for helping NGOs !.
           </p>
         </Mid3Cards>
         <Mid3Cards>
           <CardImage />
-          <h3 className={CardTitle}> Quantify Impact</h3>
+          <h3 className={CardTitle}> Measure Impact</h3>
           <p className={CardText}>
-            Measure the impact you had on the communities that
-            were taken care of by your projects
+            Quantify the reach and impact you had through your
+            supported projects.
           </p>
         </Mid3Cards>
       </div>
