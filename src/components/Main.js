@@ -1,24 +1,26 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { MainDiv } from '../styles/MainStyles.js'
+import { Grid } from '../styles/GridStyles.js';
 import Home from './Home'
 import Ngos from './Ngos'
 import Platform from './Platform'
-import NotFound from './NotFound'
+import Header from './Header';
+import Footer from './Footer';
 
-const Main = () => {
+const Main = ({ match }) => {
+  console.log('Main');
+  console.log(match);
   return (
-    <MainDiv>
-      <Switch>
-        <Route exact path="/" render={() => (
-            <Redirect to="/people"/>
-        )}/>
-        <Route exact path='/people' component={Home}/>
-        <Route exact path='/ngos' component={Ngos}/>
-        <Route exact path='/platform' component={Platform}/>
-      <Route component={NotFound} />
-      </Switch>
-    </MainDiv>
+    <Grid>
+      <Header />
+      <MainDiv>
+            <Route path={`${match.url}/people`} component={Home} />
+            <Route path={`${match.url}/ngos`} component={Ngos} />
+      </MainDiv>
+      <Footer />
+    </Grid>
+
   )
 }
 

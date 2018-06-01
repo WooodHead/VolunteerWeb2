@@ -40,10 +40,6 @@ export const NavbarLeft = styled('div')`
   font-weight: bold;
   align-items: center;
   text-decoration: none;
-
-  hover {
-    text-decoration: none;
-  }
 `
 export const NavbarRight = styled('div')`
   display: flex;

@@ -18,10 +18,6 @@ a {
   color: white;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 h3 {
   font-size: 1.77rem;
   margin: 1.72rem 0 0.9rem 0;
@@ -36,6 +32,6 @@ button {
 
 button:hover {
     background-color: white;
-    color: #4285f4;
+    color: #2F80ED;
     cursor:pointer
 }
