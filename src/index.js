@@ -18,6 +18,7 @@ ReactDOM.render((
     <BrowserRouter>
       <Switch>
         <Redirect exact from='/' to='/web/people'/>
+        <Redirect exact from='/platform' to='/platform/authenticate'/>
         <Route path="/web" component={Main}/>
         <Route path="/platform" component={Platform}/>
         <Route component={NotFound} />

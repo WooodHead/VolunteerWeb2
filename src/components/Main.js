@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import { MainDiv } from '../styles/MainStyles.js'
 import { Grid } from '../styles/GridStyles.js';
 import Home from './Home'
