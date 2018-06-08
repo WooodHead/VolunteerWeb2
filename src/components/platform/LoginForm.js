@@ -2,13 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Form, Field } from 'react-final-form'
 import TextField from './TextField'
-
-import { formGroup, formFields, formButtons, FormButt, FormHelpText } from '../../styles/platform/PlatformStyles.js';
-
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+import { FlexDiv2, formButtons, FormButt, FormHelpText } from '../../styles/platform/PlatformStyles.js';
 
 const onSubmit = async values => {
-  await sleep(300)
+
 }
 
 // Error Validation
@@ -24,13 +21,13 @@ const validate = values => {
 }
 
 const LoginForm = () => (
-  <div className={formGroup}>
+  <FlexDiv2 flexvalue={3} direction='column'>
     <Form
       onSubmit={onSubmit}
       validate={validate}
       render={({ handleSubmit, submitting, pristine }) => (
         <form onSubmit={handleSubmit}>
-            <div className={formFields}>
+            <FlexDiv2 direction='column' justify='flex-start' align='flex-start'>
               <Field
                 name="email"
                 autoFocus
@@ -48,21 +45,21 @@ const LoginForm = () => (
                 type="password"
                 placeholder="Password"
               />
-            </div>
+            </FlexDiv2>
 
-          <div className={formButtons}>
+          <FlexDiv2 direction='row' justify='space-between' align='center' padding='5.1rem'>
             <Link to="/platform/register">
               <p className={FormHelpText}> Register  </p>
             </Link>
             <FormButt>
               SIGN IN
             </FormButt>
-          </div>
+          </FlexDiv2>
 
         </form>
       )}
     />
-  </div>
+  </FlexDiv2>
 )
 
 export default LoginForm;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Query } from "react-apollo";
+// import { Query } from "react-apollo";
 import { HomeGrid, CardText, CardTitle,
   CardImage2, CardsContainer, Mid3Div,
   Mid3Cards, UpperHome2,MidRightPic, MidLeftList, flexDiv,

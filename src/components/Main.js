@@ -1,10 +1,9 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import { MainDiv } from '../styles/MainStyles.js'
 import { Grid } from '../styles/GridStyles.js';
 import Home from './Home'
 import Ngos from './Ngos'
-import Platform from './Platform'
 import Header from './Header';
 import Footer from './Footer';
 

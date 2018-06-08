@@ -1,5 +1,4 @@
 import React from 'react';
-import { Query } from "react-apollo";
 import { HomeGrid, CardText, CardTitle,
   CardImage, CardsContainer, Mid3Div,
   Mid3Cards, UpperHome,MidRightPic, MidLeftList, flexDiv,
@@ -99,18 +98,3 @@ const Home = () => (
 
 
 export default Home;
-
-
-// <Query query={GET_DATA}>
-//   {({ loading, error, data }) => {
-//     if (loading) return "Loading...";
-//     if (error) return `Error! ${error.message}`;
-//     console.log(data)
-//
-//     return (
-//       <div>
-//         This will be the body
-//       </div>
-//     );
-//   }}
-// </Query>

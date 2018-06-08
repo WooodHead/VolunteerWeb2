@@ -10,12 +10,37 @@ export const Grid2 = styled('div')`
   justify-content: center;
 `
 
-export const CardStyle = css`
-  width: 23rem;
-  height: 28rem;
+export const Card2 = styled('div')`
+  width: ${props => props.width};
+  height: ${props => props.height};
   padding: 2.4rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: ${props => props.direction ? 'column' : 'row'};
+  border-radius: 15px;
+  box-shadow:
+    inset 0.03rem 0.0rem 0.75px 0px rgba(0,0,0,0.3),
+    inset -0.03rem -0.1rem 0.75px 0px rgba(0,0,0,0.3);
+`
+
+export const FlexDiv2 = styled('div')`
+  display: flex;
+  flex: ${props => props.flexvalue};
+  flex-direction: ${props => props.direction};
+  justify-content: ${props => props.justify};
+  align-items: ${props => props.align};
+  padding-top: ${props => props.padding};
+`
+
+export const FlexDiv3 = styled('div')`
+  display: flex;
+  flex: 1;
+  flex-direction: ${props => props.direction};
+  justify-content: ${props => props.justify};
+  align-items: ${props => props.align};
+  padding-top: ${props => props.padding};
+  margin-left: 2rem;
+  box-shadow:
+    inset 0.02rem 0px rgba(0,0,0,0.2);
 `
 
 export const CardTitle = css`
@@ -37,37 +62,6 @@ export const CardActionDescriptor = css`
   margin 0;
 `
 
-export const formHeader = css`
-  display: flex;
-  flex: 2;
-  flex-direction: column;
-`
-
-export const formGroup = css`
-  display: flex;
-  flex: 3;
-  flex-direction: column;
-  justify-content: center;
-
-`
-
-export const formFields = css`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-`
-
-export const formButtons = css`
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 5rem;
-`
-
 export const FormButt = styled('button')`
   font-size: 0.8rem;
   background-color: #2F80ED;
@@ -85,4 +79,10 @@ export const FormHelpText = css`
   font-size: 1rem;
   font-weight: bold;
   color: #2F80ED;
+`
+
+export const ErrorText = css`
+  font-size: 1rem;
+  font-weight: bold;
+  color: red;
 `
