@@ -1,30 +1,40 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
-import Drawer from './platform/Drawer.js'
-import CheckAuth from '../views/platform/CheckAuth.js'
+import { Route, Redirect, Switch } from 'react-router-dom'
 import { Grid2 } from '../styles/platform/PlatformStyles.js';
+import {checkAuth} from '../client/util.js'
 
 // components
+import Drawer from './platform/Drawer.js'
 import Login from '../views/platform/Login.js'
 import Register from '../views/platform/Register.js'
-import NgoForm1 from '../views/platform/NgoForm1.js'
-import NgoForm2 from '../views/platform/NgoForm2.js'
+import CreateNgo1 from '../views/platform/CreateNgo1.js'
+import CreateNgo2 from '../views/platform/CreateNgo2.js'
+
+
+const AuthRoute = ({ component: Component, ...rest }) => {
+  return (
+    <Route {...rest} render={(props) => (
+      checkAuth()
+        ? <Component {...props} />
+        : <Redirect to='/platform/login' />
+    )} />
+  )
+}
 
 class Platform extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {loggedIn : false}
   }
-
   render () {
     return (
       <Grid2>
-        <CheckAuth path={`${this.props.match.url}/authenticate`} component={Drawer} />
+      <Switch>
+        <AuthRoute path={`${this.props.match.url}/authenticate`} component={Drawer} />
         <Route path={`${this.props.match.url}/login`} component={Login} />
         <Route path={`${this.props.match.url}/register`} component={Register} />
-        <Route path={`${this.props.match.url}/createNgo1`} component={NgoForm1} />
-        <Route path={`${this.props.match.url}/createNgo2`} component={NgoForm2} />
+        <AuthRoute path={`${this.props.match.url}/createNgo1`} component={CreateNgo1} />
+        <AuthRoute path={`${this.props.match.url}/createNgo2`} component={CreateNgo2} />
+      </Switch>
       </Grid2>
     )
   }

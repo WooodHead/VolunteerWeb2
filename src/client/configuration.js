@@ -2,7 +2,7 @@ import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { setContext } from 'apollo-link-context';
 import { InMemoryCache } from 'apollo-cache-inmemory';
-// import { getToken } from '../client/util';
+import { getToken } from '../client/util';
 
 
 // Apollo links definition, one for http interfaace and the other one
@@ -10,8 +10,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const httpLink = new HttpLink({ uri: 'http://localhost:3000/graphql' });
 const authLink = setContext(async (req, { headers }) => {
-  const token = '';
-  // const token = await getToken();
+  const token = await getToken();
   return {
     ...headers,
     headers: {

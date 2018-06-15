@@ -1,27 +1,29 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom';
-import { FlexDiv2, formButtons, FormButt, ErrorText, FormHelpText } from '../../styles/platform/PlatformStyles.js';
+import { FlexDiv2, FormButt, ErrorText, FormHelpText, formHalf } from '../../styles/platform/PlatformStyles.js';
 import { Form, Field } from 'react-final-form'
 import TextField from './TextField'
 import ActivityIndicator from './ActivityIndicator'
+import Picker from './Picker'
+import { causes, orgSizes, countries } from '../../client/formsFieldsData.js'
 
 // GQL STUFF
 import { Mutation } from "react-apollo";
-import gql from "graphql-tag";
-import { validateEmail, validateName, validatePassword, graphqlErrors} from '../../client/helpers.js'
-import { SIGNUP_ADMIN } from '../../client/mutations.js'
+import { validateEmail, validateName, graphqlErrors} from '../../client/helpers.js'
+import { REGISTER_NGO1 } from '../../client/mutations.js'
+
+let chosenCauses;
+let chosenSize;
+let chosenCountries;
 
 
 // Error Validation
 const validate = values => {
-  const errors = {}
+  let errors = {}
 
   // NGO Name Checks
   if (!values.orgName) {
     errors.orgName = 'Required'
-  }
-  else if (!validateName(values.orgName)) {
-    errors.orgName = 'Please enter a valid name'
   }
 
   // NGO Email check
@@ -31,88 +33,109 @@ const validate = values => {
   else if (!validateEmail(values.orgEmail)) {
     errors.orgEmail = 'Please enter a valid email'
   }
-
-
-
-
+  // Website check
+  if (!values.website) {
+    errors.website = 'Required'
+  }
+  return errors
 }
 
 
+const updateCauses = selectedCauses => {
+  chosenCauses = selectedCauses;
+  validate('a')
+}
+
+const updateSizes = selectedSizes => {
+  chosenSize = selectedSizes.toString();
+  validate('a')
+}
+
+const updateCountries = selectedCountries => {
+  chosenCountries = selectedCountries;
+  validate('a')
+}
+
 const RegisterForm = ({ history }) => (
-  <Mutation mutation={SIGNUP_ADMIN}>
-    {(signupAdmin, { loading, error }) => (
-      <FlexDiv2 flexvalue={6} direction='column' justify='flex-start'>
+  <Mutation mutation={REGISTER_NGO1}>
+    {(createNgo1, { loading, error }) => (
+      <FlexDiv2 flexvalue={6} direction='column' >
         {loading ? <ActivityIndicator /> : ''}
         <Form
           onSubmit={async e => {
-            await signupAdmin({ variables: { orgName: e.orgName, orgEmail: e.orgEmail, name: e.name, lastName: e.lastName, password: e.password } })
-            console.log(error)
-            history.push('/platform/createNgo1');
+            await createNgo1({ variables: { orgName: e.orgName, orgEmail: e.orgEmail, website: e.website, orgSize: chosenSize , causes: chosenCauses, countries: chosenCountries } })
+            history.push('/platform/createNgo2');
           }}
           validate={validate}
           render={({ handleSubmit, submitting, pristine }) => (
             <form onSubmit={handleSubmit}>
-              <FlexDiv2  flexvalue={3} direction='column' align='space-between' padding='1.5rem'>
-                <FlexDiv2 direction='row' justify='space-between' align='flex-start'>
-                  <Field
-                    name="orgName"
-                    margin='normal'
-                    component={TextField}
-                    type="text"
-                    placeholder="Organization Name"
-                    autoFocus
-                  />
+              <FlexDiv2 flexvalue={6} direction='column' justify='space-between' padding='1.5rem'>
+
+                <FlexDiv2 direction='row' justify='space-between' padding='1.5rem'>
+                  <div className={formHalf}>
+                    <Field
+                      name="orgName"
+                      margin='dense'
+                      component={TextField}
+                      type="text"
+                      placeholder="Organization Name"
+                      autoFocus
+                      fullWidth
+                    />
+
+                  </div>
+                  <div className={formHalf}>
                   <Field
                     name="orgEmail"
-                    margin='normal'
+                    margin='dense'
                     component={TextField}
                     type="email"
                     placeholder="Organization Email"
+                    fullWidth
                   />
+                  </div>
                 </FlexDiv2>
 
-
-                <FlexDiv2 direction='row' justify='space-between' align='flex-start'>
                   <Field
-                    name="orgWeb"
-                    margin='normal'
+                    name="website"
+                    margin='dense'
                     component={TextField}
-                    type="name"
+                    type="text"
                     placeholder="Organization Website"
                   />
                   <Field
-                    name="yearFounded"
-                    margin='normal'
-                    component={TextField}
-                    type="number"
-                    placeholder="Year Founded"
-                  />
-                </FlexDiv2>
-
-                <FlexDiv2 direction='row' justify='space-between' align='flex-start'>
-                  <Field
-                    name="password"
-                    margin='normal'
-                    component={TextField}
-                    type="password"
-                    placeholder="Password"
+                    name="causes"
+                    component={Picker}
+                    type="select"
+                    label="Causes (Max of 3)"
+                    data={causes}
+                    updateSelected={updateCauses}
                   />
                   <Field
-                    name="confirmation"
-                    margin='normal'
-                    component={TextField}
-                    type="password"
-                    placeholder="Confirm Password"
+                    name="countries"
+                    component={Picker}
+                    type="select"
+                    label="Country of Action"
+                    data={countries}
+                    updateSelected={updateCountries}
                   />
-                </FlexDiv2>
+                  <Field
+                    name="orgSize"
+                    margin='normal'
+                    component={Picker}
+                    type="select"
+                    label="Organization Size"
+                    data={orgSizes}
+                    updateSelected={updateSizes}
+                  />
               </FlexDiv2>
               {error ? <p className={ErrorText}>{graphqlErrors(error.message)}</p> : ''}
-              <FlexDiv2 flexvalue={1} direction='row' justify='space-between' align='center' padding='3.38rem'>
-                <Link to="/platform/login">
-                  <p className={FormHelpText}> Login  </p>
+              <FlexDiv2 flexvalue={1} direction='row' justify='space-between' align='center' padding='3.3rem'>
+                <Link to="/platform/policies/privacy">
+                  <p className={FormHelpText}> Privacy Policy  </p>
                 </Link>
                 <FormButt>
-                  REGISTER
+                  STEP 2
                 </FormButt>
               </FlexDiv2>
             </form>

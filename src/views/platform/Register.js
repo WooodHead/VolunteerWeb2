@@ -8,10 +8,10 @@ import { FlexDiv2, FlexDiv3 } from '../../styles/platform/PlatformStyles.js'
 const Register = () => {
 
   return (
-      <Card height='35rem' width='53rem' direction2='row'>
+      <Card height='33rem' width='47rem' direction2='row'>
 
 
-        <FlexDiv2 flexvalue={7} direction='column'>
+        <FlexDiv2 flexvalue={6} direction='column'>
           <FormHeader
             brand="Volunteer"
             title = "Register Manager Account"

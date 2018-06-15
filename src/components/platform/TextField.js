@@ -15,5 +15,7 @@ export default ({
     error={meta.error && meta.touched}
     onChange={onChange}
     value={value}
+    multiline={rest.multiline}
+    rowsMax={rest.rows}
   />
 )

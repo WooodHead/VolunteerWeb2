@@ -28,7 +28,8 @@ export const FlexDiv2 = styled('div')`
   flex-direction: ${props => props.direction};
   justify-content: ${props => props.justify};
   align-items: ${props => props.align};
-  padding-top: ${props => props.padding};
+  margin-top: ${props => props.padding};
+  padding-right: ${props => props.padding2};
 `
 
 export const FlexDiv3 = styled('div')`
@@ -85,4 +86,21 @@ export const ErrorText = css`
   font-size: 1rem;
   font-weight: bold;
   color: red;
+`
+
+export const ChipStyle = css`
+  margin-left: 0.2rem;
+`
+
+export const ChipMenu = css`
+`
+export const pickerCont = css`
+  display:flex;
+  flex-wrap: wrap;
+`
+
+formHalf
+
+export const formHalf = css`
+  width: 43%
 `
