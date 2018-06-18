@@ -7,8 +7,9 @@ import { getToken } from '../client/util';
 
 // Apollo links definition, one for http interfaace and the other one
 //For context, then concatenate both.
+// https://git.heroku.com/volunteer-server.git'
 
-const httpLink = new HttpLink({ uri: 'https://git.heroku.com/volunteer-server.git' });
+const httpLink = new HttpLink({ uri: 'https://git.heroku.com/volunteer-server.git/' });
 const authLink = setContext(async (req, { headers }) => {
   const token = await getToken();
   return {
