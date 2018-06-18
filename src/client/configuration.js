@@ -10,7 +10,7 @@ import { getToken } from '../client/util';
 // https://git.heroku.com/volunteer-server.git'
 //rara
 
-const httpLink = new HttpLink({ uri: 'https://git.heroku.com/volunteer-server.git/' });
+const httpLink = new HttpLink({ uri: 'https://git.heroku.com/volunteer-server.git' });
 const authLink = setContext(async (req, { headers }) => {
   const token = await getToken();
   return {
