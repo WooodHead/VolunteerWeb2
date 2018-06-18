@@ -1,15 +1,13 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom';
-import { FlexDiv2, FormButt, ErrorText, FormHelpText, formHalf } from '../../styles/platform/PlatformStyles.js';
+import { FlexDiv2, FormButt, ErrorText, FormHelpText } from '../../styles/platform/PlatformStyles.js';
 import { Form, Field } from 'react-final-form'
 import TextField from './TextField'
 import ActivityIndicator from './ActivityIndicator'
-import Picker from './Picker'
-import { causes, orgSizes, countries } from '../../client/formsFieldsData.js'
 
 // GQL STUFF
 import { Mutation } from "react-apollo";
-import { validateEmail, validateName, graphqlErrors} from '../../client/helpers.js'
+import { validateWeb, graphqlErrors} from '../../client/helpers.js'
 import { UPDATE_NGO } from '../../client/mutations.js'
 
 
@@ -19,6 +17,9 @@ const validate = values => {
 
   if (!values.logo) {
     errors.logo = 'Required'
+  }
+  else if (!validateWeb(values.logo)) {
+    errors.logo = 'Please provide a valid URL'
   }
   if (!values.mission) {
     errors.mission = 'Required'
@@ -37,13 +38,17 @@ const validate = values => {
 
 const RegisterForm = ({ history }) => (
   <Mutation mutation={UPDATE_NGO}>
-    {(createNgo1, { loading, error }) => (
+    {(updateNgo, { loading, error, data }) => (
       <FlexDiv2 flexvalue={6} direction='column' >
         {loading ? <ActivityIndicator /> : ''}
         <Form
           onSubmit={async e => {
-            // await createNgo1({ variables: { orgName: e.orgName, orgEmail: e.orgEmail, website: e.website, orgSize: chosenSize , causes: chosenCauses, countries: chosenCountries } })
-            // history.push('/platform/createNgo2');
+            await updateNgo({ variables: { logo: e.logo, mission: e.mission, description: e.description } })
+            .then(({ data }) => {
+              if (!data.error) {
+                history.push('/platform/authenticate')
+              }
+            })
           }}
           validate={validate}
           render={({ handleSubmit, submitting, pristine }) => (

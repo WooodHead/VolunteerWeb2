@@ -92,14 +92,11 @@ export const ChipStyle = css`
   margin-left: 0.2rem;
 `
 
-export const ChipMenu = css`
-`
+
 export const pickerCont = css`
   display:flex;
   flex-wrap: wrap;
 `
-
-formHalf
 
 export const formHalf = css`
   width: 43%

@@ -8,7 +8,7 @@ import { getToken } from '../client/util';
 // Apollo links definition, one for http interfaace and the other one
 //For context, then concatenate both.
 
-const httpLink = new HttpLink({ uri: 'http://localhost:3000/graphql' });
+const httpLink = new HttpLink({ uri: 'https://git.heroku.com/volunteer-server.git' });
 const authLink = setContext(async (req, { headers }) => {
   const token = await getToken();
   return {

@@ -9,7 +9,7 @@ import { causes, orgSizes, countries } from '../../client/formsFieldsData.js'
 
 // GQL STUFF
 import { Mutation } from "react-apollo";
-import { validateEmail, validateName, graphqlErrors} from '../../client/helpers.js'
+import { validateEmail, graphqlErrors} from '../../client/helpers.js'
 import { REGISTER_NGO1 } from '../../client/mutations.js'
 
 let chosenCauses;
@@ -58,13 +58,17 @@ const updateCountries = selectedCountries => {
 
 const RegisterForm = ({ history }) => (
   <Mutation mutation={REGISTER_NGO1}>
-    {(createNgo1, { loading, error }) => (
+    {(createNgo1, { loading, error, data }) => (
       <FlexDiv2 flexvalue={6} direction='column' >
         {loading ? <ActivityIndicator /> : ''}
         <Form
           onSubmit={async e => {
             await createNgo1({ variables: { orgName: e.orgName, orgEmail: e.orgEmail, website: e.website, orgSize: chosenSize , causes: chosenCauses, countries: chosenCountries } })
-            history.push('/platform/createNgo2');
+            .then(({ data }) => {
+              if (!data.error) {
+                history.push('/platform/createNgo2')
+              }
+            })
           }}
           validate={validate}
           render={({ handleSubmit, submitting, pristine }) => (

@@ -22,9 +22,6 @@ const AuthRoute = ({ component: Component, ...rest }) => {
 }
 
 class Platform extends Component {
-  constructor(props) {
-    super(props);
-  }
   render () {
     return (
       <Grid2>

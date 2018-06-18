@@ -28,23 +28,34 @@ export const REGISTER_NGO1 = gql`
   }
 `;
 
-
 export const UPDATE_NGO = gql`
-  mutation createNgo1(
+  mutation updateNgo(
     $orgName: String,
     $orgEmail: String,
     $website: String,
     $orgSize: String,
     $causes: [String],
     $countries: [String]
+    $logo: String
+    $bannerImg: [String]
+    $mission: String
+    $description: String
+    $status: String
+    $ctas: [String]
   ) {
-    createNgo1(
+    updateNgo(
       orgName: $orgName,
       orgEmail: $orgEmail,
       website: $website,
       orgSize: $orgSize,
       causes: $causes,
-      countries: $countries
+      countries: $countries,
+      logo:$logo,
+      bannerImg:$bannerImg,
+      mission:$mission,
+      description:$description,
+      status:$status,
+      ctas:$ctas,
     )
     {
       orgName

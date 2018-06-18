@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Chip from '@material-ui/core/Chip';
-import { ChipStyle, ChipMenu, pickerCont } from '../../styles/platform/PlatformStyles.js';
+import { ChipStyle, pickerCont } from '../../styles/platform/PlatformStyles.js';
 
 class Picker extends React.Component {
   state = {
@@ -44,7 +44,7 @@ class Picker extends React.Component {
             )}
           >
             {this.props.data.map(piece => (
-              <MenuItem className={ChipMenu} key={piece} value={piece}>
+              <MenuItem key={piece} value={piece}>
                 {piece}
               </MenuItem>
             ))}

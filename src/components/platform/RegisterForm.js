@@ -86,6 +86,7 @@ const RegisterForm = ({ history }) => (
                     name="adminEmail"
                     margin='normal'
                     fullWidth
+                    autoFocus
                     component={TextField}
                     type="email"
                     placeholder="Manager Account Email"

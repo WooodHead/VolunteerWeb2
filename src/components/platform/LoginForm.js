@@ -8,7 +8,7 @@ import { signIn } from '../../client/util.js'
 
 // GQL STUFF
 import { Mutation } from "react-apollo";
-import { validateEmail, validateName, validatePassword, graphqlErrors} from '../../client/helpers.js'
+import { validateEmail, validatePassword, graphqlErrors} from '../../client/helpers.js'
 import { LOGIN_ADMIN } from '../../client/mutations.js'
 
 // Error Validation
