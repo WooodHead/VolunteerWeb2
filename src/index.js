@@ -12,7 +12,6 @@ import Main from './components/Main';
 import Platform from './components/Platform';
 import NotFound from './components/NotFound';
 
-
 ReactDOM.render((
   <ApolloProvider client={client}>
     <BrowserRouter>

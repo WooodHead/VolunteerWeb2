@@ -4,10 +4,7 @@ import { setContext } from 'apollo-link-context';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { getToken } from '../client/util';
 
-
-// Apollo links definition, one for http interfaace and the other one
-//For context, then concatenate both.
-// https://git.heroku.com/volunteer-server.git'
+// Apollo links definition, one for http interface, one for authorization header via jwt
 
 const httpLink = new HttpLink({ uri: 'https://git.heroku.com/volunteer-server.git/graphql' });
 const authLink = setContext(async (req, { headers }) => {
