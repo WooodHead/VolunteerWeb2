@@ -5,8 +5,9 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { getToken } from '../client/util';
 
 // Apollo links definition, one for http interface, one for authorization header via jwt
-
+//
 const httpLink = new HttpLink({ uri: 'https://git.heroku.com/volunteer-server.git/graphql' });
+
 const authLink = setContext(async (req, { headers }) => {
   const token = await getToken();
   return {
